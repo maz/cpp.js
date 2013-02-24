@@ -29,7 +29,10 @@ evaluate_macros=(macros,code,__LINE__)->
 	maybe_found_word=->
 		if word of macros
 			parts.push(code.substring(begin,i-word.length))
-			parts.push(macros[word])
+			if (typeof macros[word])=='string'
+				parts.push(macros[word])
+			else
+				null#TODO: implement macro functions
 			begin=i
 	for ch,i in code
 		if ch.match(/^[A-Za-z0-9_]$/)

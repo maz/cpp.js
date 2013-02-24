@@ -39,7 +39,11 @@
     maybe_found_word = function() {
       if (word in macros) {
         parts.push(code.substring(begin, i - word.length));
-        parts.push(macros[word]);
+        if ((typeof macros[word]) === 'string') {
+          parts.push(macros[word]);
+        } else {
+          null;
+        }
         return begin = i;
       }
     };
