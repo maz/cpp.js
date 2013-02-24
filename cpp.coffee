@@ -67,6 +67,8 @@ elif_regex=/#elif[ \t]+(.+)$/
 			else
 				block_comment=on
 				return line.substr(0,idx)
+	lines=lines.map (line)->
+		return line.replace(/\/\/.*$/,"")
 	states=[]
 	state=PREPROCESS_STATES.DEFAULT
 	for line_orig,i in lines
