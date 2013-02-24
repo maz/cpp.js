@@ -1,0 +1,12 @@
+CPP.js is a simple C Preprocessor implemented in CoffeeScript. To see how to use it, look at the index.html file which gives an example.
+
+Simple Usage:
+
+cpp("<my-code-here>",{MY_MACROS_HERE:"Macros?!"}) => result
+
+Not yet implemented:
+	#line
+	#pragma
+	#define my_func(a,b)	(a+b)
+	#include
+	(probably more features that i'm forgetting)
