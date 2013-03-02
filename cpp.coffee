@@ -46,7 +46,7 @@ evaluate_macros=(macros,code,__LINE__)->
 
 evaluate_condition=(macros,code,__LINE__)->
 	cppParser.yy._macros=macros
-	cppParser.parse(code)==1
+	!!cppParser.parse(code)
 
 elif_regex=/#elif[ \t]+(.+)$/
 
