@@ -1,4 +1,4 @@
-CPP.js is a simple C Preprocessor implemented in CoffeeScript. To see how to use it, look at the index.html file which gives an example.
+CPP.js is a simple C Preprocessor implemented in CoffeeScript. To see how to use it, look at the index.html file which gives an example. You only need to include the cpp-min.js file which includes both project files.
 
 Simple Usage:
 
